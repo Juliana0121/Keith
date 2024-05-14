@@ -1,0 +1,14 @@
+[
+    {
+        "tipo": "Producto",
+        "nombre": "apple iphone 13",
+        "cantidad": 4,
+        "fecha_hora": "2024-05-12 10:20:00"
+    },
+    {
+        "tipo": "Servicio",
+        "nombre": "pospago",
+        "cantidad": 3,
+        "fecha_hora": "2024-05-12 10:32:17"
+    }
+]

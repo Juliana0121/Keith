@@ -1,0 +1,144 @@
+{
+    "Servicios": {
+        "Internet": {
+            "Fibra Optica": "650.000 COP",
+            "Internet Hogar 350MB/s Simetrico": "369.999 COP"
+        },
+        "Planes Pospago": {
+            "Mensual": "59.999 COP",
+            "Quincenal": "35.999 COP"
+        },
+        "Planes Prepago": {
+            "Mensual": "49.999 COP",
+            "Semanal": "7.999 COP"
+        }
+    },
+    "Productos": {
+        "Apple iPhone 15": {
+            "precio": "4.435.960  COP",
+            "Memoria interna":"128 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Apple iphone 15 Pro Max": {
+            "precio": "6.149.960  COP",
+            "Memoria interna":"256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Apple iphone 11": {
+            "precio": "2.791.960  COP",
+            "Memoria interna":"128 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Apple iphone 14 Pro": {
+            "precio": "4.253.960  COP",
+            "Memoria interna":"128 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Aple iphone 14 plus": {
+            "precio": "4.425.960  COP",
+            "Memoria interna":"128 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Apple iPhone 13": {
+            "precio": "2.519.900 COP",
+            "Memoria interna": "128 GB",
+            "Cámara frontal principal": "12 Mpx",
+            "Cámara trasera principal": "12 Mpx"
+        },
+        "Motorola Edge 40 Neo": {
+            "precio": "1.300.000 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Motorola Moto G84": {
+            "precio": "889.900 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"    
+        },
+        "Motorola Moto G54": {
+            "precio": "769.900 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx" 
+        },   
+        "Motorola Moto G24.": {
+            "precio": "649.900 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Motorola Moto G34": {
+            "precio": "899.900 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Samsung Galaxy Z Flip 5": {
+            "precio": "4.299.950 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Samsung Galazy S23": {
+            "precio": "2.498.950 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Samsung Galaxy A54": {
+            "precio": "1.649.950 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Samsung Galaxy A05": {
+            "precio": "369.900 COP",
+            "Memoria interna": "64 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "ZTE Blade V50 Desing": {
+            "precio": "399.900 COP",
+            "Memoria interna": "64 GB",
+            "Cámara frontal principal": "32 Mpx",
+            "Cámara trasera principal": "50 Mpx"
+        },
+        "Xiaomi Redmi Note 10s": {
+            "precio": "537.719 COP",
+            "Memoria interna": "128 GB",
+            "Cámara frontal principal": "13 Mpx",
+            "Cámara trasera principal": "64 Mpx"
+        },
+        "XIaomi Redmi Note 12": {
+            "precio": "863.900 COP",
+            "Memoria interna": "128 GB",
+            "Cámara frontal principal": "13 Mpx",
+            "Cámara trasera principal": "64 Mpx"
+        },
+        "Xiaomi A3": {
+            "precio": "360.900 COP",
+            "Memoria interna": "64 GB",
+            "Cámara frontal principal": "13 Mpx",
+            "Cámara trasera principal": "64 Mpx"
+        },
+        "Xiaomi Redmi Note 13": {
+            "precio": "799.900 COP",
+            "Memoria interna": "256 GB",
+            "Cámara frontal principal": "13 Mpx",
+            "Cámara trasera principal": "64 Mpx"
+        },
+        "XIaomi Redmi Note 13 Pro Plus": {
+            "precio": "2.099.900 COP",
+            "Memoria interna": "512 GB",
+            "Cámara frontal principal": "13 Mpx",
+            "Cámara trasera principal": "64 Mpx"
+        }
+    }
+}    

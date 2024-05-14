@@ -1,0 +1,24 @@
+{
+    "Usuarios": [
+        {
+            "Nombre": "Alvaro",
+            "Direccion": "ldkflsnfs",
+            "Telefono": "58545456465",
+            "Categoria": "cliente Regular",
+            "Identificacion": 56421354,
+            "Servicios utilizados": [
+                "prepago"
+            ]
+        },
+        {
+            "Nombre": "kfhjkshfs",
+            "Direccion": "sdkdflskf",
+            "Telefono": "545654654",
+            "Categoria": "lsdkfjlksdf",
+            "Identificacion": 545465465,
+            "Servicios utilizados": [
+                "pospago"
+            ]
+        }
+    ]
+} 
