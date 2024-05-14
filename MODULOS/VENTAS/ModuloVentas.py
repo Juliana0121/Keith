@@ -99,4 +99,27 @@ def registrar_compra(tipo, nombre, cantidad):
 
     print("Compra registrada exitosamente.")
 
-    
+"""
+def generar_factura_compra(compra, catalogo):
+    productos_comprados = compra["Productos"]
+    total = sum(catalogo[producto]["precio"] * cantidad for producto, cantidad in productos_comprados.items())
+
+    factura = {
+        "Fecha": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "Productos": productos_comprados,
+        "Total": total
+    }
+
+    nombre_factura = f"Factura_{factura['Fecha']}.json"
+
+    with open(nombre_factura, 'w') as file:
+        json.dump(factura, file, indent=4)
+
+    print(f"Se ha generado la factura correctamente: {nombre_factura}")
+
+compra = {}
+
+catalogo = {}
+
+generar_factura_compra(compra, catalogo)
+"""

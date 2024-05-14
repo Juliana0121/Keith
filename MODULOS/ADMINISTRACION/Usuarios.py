@@ -1,26 +1,29 @@
 #Usuarios
-from MENU.Datos import guardar_datos
+from MENU.Datos import guardar_datos, cargar_datos
 import json
+
+RUTA_CLIENTE = "MODULOS/ADMINISTRACION/Usuarios.json"
+datos = cargar_datos(RUTA_CLIENTE)
 
 def cargar_usuarios():
     try:
-        with open('MODULOS/ADMINISTRACION/Usuarios.json', 'r') as file:
-           datos = json.load(file)
-        return datos
+        return cargar_datos("MODULOS/ADMINISTRACION/Usuarios.json")
     except FileNotFoundError:
         return []
+    except Exception as e:
+        # Captura cualquier excepción y maneja el error aquí
+        print("Ha ocurrido un error:", e)
+    
     
 def guardar_usuarios(usuarios):
     guardar_datos(usuarios, "MODULOS/ADMINISTRACION/Usuarios.json")
         
 
 def agregar_usuario(nuevo_usuario):
-    usuarios = cargar_usuarios()
-    print(usuarios)
-    usuarios.append(nuevo_usuario)
-    guardar_datos(usuarios)
+    usuarios = dict(cargar_usuarios())
+    usuarios["Usuarios"].append(nuevo_usuario)
+    guardar_datos(usuarios, "MODULOS/ADMINISTRACION/Usuarios.json")
 
-    
 def obtener_usuario_por_identificacion(identificacion):
     usuarios = cargar_usuarios()
     for usuario in usuarios:
@@ -28,41 +31,97 @@ def obtener_usuario_por_identificacion(identificacion):
             return usuario
     return None
 
-def actualizar_usuario(identificacion_usuario, datos_actualizados):
-    usuarios = cargar_usuarios()
-    for usuario in usuarios:
-        if usuario["Identificacion"] == identificacion_usuario:
-            usuario.update(datos_actualizados)
-            guardar_usuarios(usuarios)
-            return True
-    return False
+def Actualizar_usuarios(datos):
+    datos=dict(datos)
+    Identificacion = int(input("Ingrese el numero de identificación del usuario que desea actualizar "))
+    for i in range(len(datos["Usuarios"])):
+        if datos["Usuarios"][i]["Identificacion"] == Identificacion:
 
-def eliminar_usuario(identificador_usuario):
+            while True:
+                print("(1) Actualizar el nombre: ")
+                print("(2) Actualizar la dirección: ")
+                print("(3) Actualizar el telefono: ")
+                print("(4) Actializar la categoria: ")
+                print("(5) Actualizar la identificación: ")
+                print("(6) Actualizar los servicios utilizados: ")
+                
+
+                print("(7) salir ")
+                opc=input("ingrese la opcion: ")
+                
+
+
+                if opc=="1":
+                    datos["Usuarios"][i]["Nombre"]= input("ingrese el nombre nuevo: ")
+                    print("Guardado exitosamente")
+                    print("----------------------------------")
+
+
+                elif opc== "2":
+                    datos["Usuarios"][i]["Direccion"]=str(input("ingrese la direccion nueva: "))
+                    print("Guardado exitosamente")
+                    print("----------------------------------")
+
+                elif opc=="3":
+                    datos["Usuarios"][i]["Telefono"]=int(input("ingrese el telefono nuevo: "))
+                    print("Guardado exitosamente")
+                    print("----------------------------------")
+
+                elif opc=="4":
+                    datos["Usuarios"][i]["Categoria"]=input("ingrese la categoria nueva: ")
+                    print("Guardado exitosamente")
+                    print("----------------------------------")
+                
+                elif opc=="5":
+                    datos["Usuarios"][i]["Identificacion"]=input("ingrese la nueva identificacion: ")
+                    print("Guardado exitosamente")
+                    print("----------------------------------")
+                    
+                elif opc=="6":
+                    datos["Usuarios"][i]["Servicios_utilizados"]= str(input("ingrese los nuevos servicios utilizados: "))
+                    print("Guardado exitosamente")
+                    print("----------------------------------")
+
+                elif opc=="7":
+    
+                    break
+            break
+    return datos
+
+def agregar_usuario(nuevo_usuario):
     usuarios = cargar_usuarios()
-    usuarios_actualizados = [usuario for usuario in usuarios if usuario["Identificacion"] != identificador_usuario]
-    if len(usuarios_actualizados) != len(usuarios):
-        guardar_usuarios(usuarios_actualizados)
-        return True
+    usuarios.append(nuevo_usuario)
+    guardar_usuarios(usuarios, "MODULOS/ADMINISTRACION/Usuarios.json")
+    
+def eliminar_producto(nombre, archivo):
+    datos = cargar_datos(archivo)
+    if datos and nombre in datos["Productos"].values():
+        productos_actualizados = {}
+        eliminado = False
+
+        for key, value in datos["Productos"].items():
+            if value != nombre:
+                productos_actualizados[key] = value
+            else:
+                eliminado = True
+
+        if eliminado:
+            datos["Productos"] = productos_actualizados
+            guardar_datos(datos, archivo)
+            return True
+    
     return False
 
 def agregar_informacion_administrador():
-    nombre = input("Nombre: ")
-    direccion = input("Dirección: ")
-    telefono = input("Teléfono: ")
-    categoria = input("Categoría: ")
-    identificacion = input("Identificación: ")
-    servicios_utilizados = input("Servicios utilizados (separados por comas): ").split(",")
+    nombre_usuario = {}
+    nombre_usuario["nombre"] = input("Nombre: ")
+    nombre_usuario["direccion"] = input("Dirección: ")
+    nombre_usuario["telefono"]= input("Teléfono: ")
+    nombre_usuario["categoria"] = input("Categoría: ")
+    nombre_usuario["identificacion"] = input("Identificación: ")
+    nombre_usuario["servicios_utilizados"] = list(input("Servicios utilizados (separados por comas): ").split(","))
 
-    nuevo_usuario = {
-        "Nombre": nombre,
-        "Direccion": direccion,
-        "Telefono": telefono,
-        "Categoria": categoria,
-        "Identificacion": int(identificacion),
-        "Servicios utilizados": servicios_utilizados
-    }
-
-    agregar_usuario(nuevo_usuario)
+    agregar_usuario(nombre_usuario)
     print("Información del usuario agregada exitosamente.")
 
 
@@ -79,9 +138,9 @@ def menu_usuarios():
         if r == 1:
             agregar_informacion_administrador()
         elif r == 2:
-            actualizar_usuario()
+            Actualizar_usuarios(datos)
         elif r == 3:
-            eliminar_usuario()
+            eliminar_producto()
         elif r == 4:
             break
    

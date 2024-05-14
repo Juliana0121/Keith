@@ -7,7 +7,6 @@ from MODULOS.VENTAS.ModuloVentas import *
 from MENU.Menu import *
 from MODULOS.ADMINISTRACION.Usuarios import *
 
-
 # ---------------------- Módulo de Administración ----------------------
 
 # Funciones para administrar usuarios
@@ -237,10 +236,12 @@ def actualizar_producto(nombre, nuevo_precio, nueva_descripcion, archivo):
 
 def eliminar_producto(nombre, archivo):
     datos = cargar_datos(archivo)
-    if datos and nombre in datos["Productos"]:
-        del datos["Productos"][nombre]
-        guardar_datos(datos, archivo)
-        return True
+    if datos and nombre in datos["Productos"].values():
+        for key, value in datos["Productos"].items():
+            if value == nombre:
+                del datos["Productos"][key]
+                guardar_datos(datos, archivo)
+                return True
     return False
 
 # ---------------------- Función Principal ----------------------

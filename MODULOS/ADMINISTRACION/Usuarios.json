@@ -1,24 +1,24 @@
 {
     "Usuarios": [
         {
-            "Nombre": "Alvaro",
-            "Direccion": "ldkflsnfs",
-            "Telefono": "58545456465",
+            "Nombre": "alvaro",
+            "Direccion": "Florida",
+            "Telefono": "484856",
             "Categoria": "cliente Regular",
-            "Identificacion": 56421354,
-            "Servicios utilizados": [
-                "prepago"
-            ]
-        },
-        {
-            "Nombre": "kfhjkshfs",
-            "Direccion": "sdkdflskf",
-            "Telefono": "545654654",
-            "Categoria": "lsdkfjlksdf",
-            "Identificacion": 545465465,
+            "Identificacion": 556,
             "Servicios utilizados": [
                 "pospago"
             ]
+        },
+        {
+            "nombre": "Juliana",
+            "direccion": "Giron",
+            "telefono": "65478216",
+            "categoria": "Cliente Leal",
+            "Identificacion": 589,
+            "servicios_utilizados": [
+                "prepago"
+            ]
         }
     ]
-} 
+}
